@@ -1,0 +1,3 @@
+Welcome to our Project in Verklegt 2...
+first things first you will need to run the requirements.txt
+pip install -r requirements.txt
