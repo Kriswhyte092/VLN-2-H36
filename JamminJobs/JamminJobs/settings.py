@@ -74,7 +74,11 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-
+# DATABESES = {
+#     'default' : {
+#         'ENGINE' : ''
+#     }
+# }
 
 DATABASES = { 
     'default': { 
@@ -84,6 +88,8 @@ DATABASES = {
         'PASSWORD': 'lH5MlYi8FG', 
         'HOST': 'verklegt-namskeid-ii.northeurope.cloudapp.azure.com', 
         'PORT': '5432', 
+        'OPTIONS': {
+            'options': '-c search_path=vln2_assignment_groups_36'}
     } 
 }
 
