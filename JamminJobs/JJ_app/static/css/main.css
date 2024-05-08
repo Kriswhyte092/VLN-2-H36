@@ -106,11 +106,14 @@
     line-height: 22.40px;
     word-wrap: break-word;
 }
-
-
-
+.body{
+	justify-content: center;
+}
 
 .home1{
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	border: solid 2px rgba(155, 155, 155, .5);
 	display: flex;
 	align-items: flex-start;
@@ -119,14 +122,19 @@
 
 .item{
 	display: flex;
-	height: 283px;
+	height: auto;
 	padding: 24px;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: flex-start;
 	gap: 16px;
 	flex: 1 0 0;
 	border: solid;
 }
+
+.job-card:hover{
+	border: solid 2px black;	
+}
+
 @media screen and (max-width: 1290px) {
   .home1 {
     flex-wrap: wrap;
