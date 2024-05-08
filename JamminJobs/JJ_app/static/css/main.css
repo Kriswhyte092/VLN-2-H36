@@ -1,8 +1,147 @@
-.home1{
-	background-color: green;
-	border: solid 2px rgba(155, 155, 155, .5);
+.job-card {
+	width: auto;
+	height: auto;
+	padding: 24px;
+	background: white;
+	border: 1px solid #D6DDEB;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 16px;
+	display: inline-flex;
+}
+
+.job-type {
+	align-self: stretch;
+	justify-content: space-between;
+	align-items: flex-start;
+	display: inline-flex;
+}
+
+.type-label {
+	padding: 4px 12px;
+	border: 1px solid #4640DE;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	display: flex;
+	text-align: center;
+	color: #4640DE;
+	font-size: 16px;
+	font-family: Epilogue;
+	font-weight: 400;
+	line-height: 25.60px;
+	word-wrap: break-word;
+}
+
+.job-details {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2px;
 	display: flex;
 }
+
+.company-name {
+	color: #25324B;
+	font-size: 18px;
+	font-family: Epilogue;
+	font-weight: 600;
+	line-height: 28.80px;
+	word-wrap: break-word;
+}
+
+.location {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.company,
+.location-text {
+    color: #515B6F;
+    font-size: 16px;
+    font-family: Epilogue;
+    font-weight: 400;
+    line-height: 25.60px;
+    word-wrap: break-word;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    opacity: 0.30;
+    background: #515B6F;
+    border-radius: 9999px;
+}
+
+.job-description {
+    width: 226px;
+    color: #7C8493;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 25.60px;
+    word-wrap: break-word;
+}
+
+.tags {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.tag {
+    padding: 4px 16px;
+    border-radius: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    font-size: 14px;
+    font-family: Epilogue;
+    font-weight: 600;
+    line-height: 22.40px;
+    word-wrap: break-word;
+}
+
+
+
+
+.home1{
+	border: solid 2px rgba(155, 155, 155, .5);
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+}
+
+.item{
+	display: flex;
+	height: 283px;
+	padding: 24px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	flex: 1 0 0;
+	border: solid;
+}
+@media screen and (max-width: 1290px) {
+  .home1 {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;/* Adjust this width as needed */
+  }
+  .item {
+    width: calc(50% - 16px); /* Adjust this width as needed */
+  }
+}
+
+
+/* EVERYTHING BELOW HERE IS USED FOR THE TEMPLATE HTML */
 
 footer{
 	background-color: #202430;
