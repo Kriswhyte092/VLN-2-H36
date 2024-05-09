@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'JJ_app',
+    'company',
+    'user',
+    'job',
 ]
 
 MIDDLEWARE = [
@@ -74,11 +77,6 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABESES = {
-#     'default' : {
-#         'ENGINE' : ''
-#     }
-# }
 
 DATABASES = { 
     'default': { 
