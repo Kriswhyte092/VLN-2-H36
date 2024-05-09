@@ -36,7 +36,7 @@
 
 .job-details {
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-con/static/js/feat_jobs.jstent: flex-start;
 	align-items: flex-start;
 	gap: 2px;
 	display: flex;
