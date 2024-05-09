@@ -46,7 +46,7 @@ const jobs = [
 	
   // Define data for more jobs as needed
 ];
-
+a = 12
 // Function to create a job card element
 function createJobCard(job) {
   const card = document.createElement("div");

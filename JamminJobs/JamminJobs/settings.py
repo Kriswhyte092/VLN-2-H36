@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'JJ_app',
+    'JJ_app.apps.JJ_appConfig',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +131,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-        BASE_DIR / "JJ_app/static",
+    os.path.join(BASE_DIR, 'JJ_app/static'),
 ]
 
 STATIC_ROOT = BASE_DIR/"staticfiles"
