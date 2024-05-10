@@ -1,16 +1,11 @@
 from django.db import models
 
-# Create your models here.
-
-class CompanyLogo(models.Model):
-    logo = models.ImageField()
-
 class Company(models.Model):
-    id = models.IntegerField(primary_key=True)
-    ssn = models.IntegerField()
+    id = models.AutoField(primary_key=True)
+    ssn = models.IntegerField(unique=True)  
     name = models.CharField(max_length=255)
     bio = models.CharField(max_length=255, blank=True)
     address = models.CharField(max_length=255)
-    page = models.CharField(max_length=255)
+    page = models.CharField(max_length=255, blank=True)
     phone = models.IntegerField()
-    companyLogo = models.ForeignKey(CompanyLogo, on_delete=models.CASCADE)
+    company_logo = models.CharField(max_length=255, blank=True)
