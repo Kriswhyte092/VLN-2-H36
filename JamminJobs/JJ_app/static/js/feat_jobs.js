@@ -42,12 +42,42 @@ const jobs = [
     description: "DESCRIPTION_7",
     tags: ["TAG_7", "TAG_8"]
   },
+  {
+    company: "COMPANY_8",
+    location: "LOCATION_8",
+    description: "DESCRIPTION_8",
+    tags: ["TAG_7", "TAG_8"]
+  },
 
 	
   // Define data for more jobs as needed
 ];
-a = 12
-// Function to create a job card element
+
+  
+//function createJobCard(job) {
+//       const big_card = document.createElement("div");
+//       big_card.classList.add("big_card");
+//  
+//       big_card.innerHTML = `
+//         <div class="job-card-bigger">
+//           <div class="job-type-bigger">
+//             <div class="type-label-bigger">${job.company}</div>
+//           </div>
+//           <div class="job-details-bigger">
+//             <div class="location">
+//               <span class="company">${job.company}</span>
+//           <div class="dot"></div>
+//           <span class="location-text">${job.location}</span>
+//             </div>
+//           </div>
+//           <div class="job-description">${job.description}</div>
+//       </div>
+//      `;
+//  
+//       return big_card;
+//   }
+  
+
 function createJobCard(job) {
   const card = document.createElement("div");
   card.classList.add("item", "item-1");
@@ -75,16 +105,56 @@ function createJobCard(job) {
   return card;
 }
 
-// Function to add job cards to the container
-function addJobCards() {
-  const container = document.querySelector('.home1');
+function createBigJobCard(job) {
+  const bigCard = document.createElement("div");
+  bigCard.classList.add("bigCard");
   
-  jobs.forEach(job => {
+  bigCard.innerHTML =  `
+    <div class="job-card">
+      <div class="job-type">
+        <div class="type-label">FullTime</div>
+      </div>
+      <div class="job-details">
+        <div class="company-name">${job.company}</div>
+        <div class="location">
+          <span class="company">${job.company}</span>
+          <div class="dot"></div>
+          <span class="location-text">${job.location}</span>
+        </div>
+      </div>
+      <div class="job-description">${job.description}</div>
+      <div class="tags">
+        ${job.tags.map(tag => `<div class="tag">${tag}</div>`).join('')}
+      </div>
+    </div>
+  `;
+   return bigCard;
+}
+
+// Function to add job cards to the container
+function addJobCards(containerSelector, jobsArray) {
+  const container = document.querySelector(containerSelector);
+  
+  jobsArray.forEach(job => {
     const jobCard = createJobCard(job);
     container.appendChild(jobCard);
   });
 }
 
+function bigAddJobCards(containerSelector, jobsArray) {
+  const container = document.querySelector(containerSelector);
+  
+  jobsArray.forEach(job => {
+    const bigJobCard = createBigJobCard(job);
+    container.appendChild(bigJobCard);
+  });
+}
+
+
 // Call the function to add job cards when the page loads
-window.addEventListener('DOMContentLoaded', addJobCards);
+window.addEventListener('DOMContentLoaded', function() {
+	addJobCards('.home1', jobs.slice(0,8));
+	bigAddJobCards('.Home_big_card1', jobs.slice(0,4));
+	bigAddJobCards('.Home_big_card', jobs.slice(4));
+});
 
