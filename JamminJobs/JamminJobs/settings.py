@@ -59,7 +59,7 @@ ROOT_URLCONF = 'JamminJobs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,13 +82,13 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 DATABASES = { 
     'default': { 
         'ENGINE': 'django.db.backends.postgresql', 
-        'NAME': 'postgres', 
-        'USER': 'vln2_assignment_groups_36_user', 
-        'PASSWORD': 'lH5MlYi8FG', 
-        'HOST': 'verklegt-namskeid-ii.northeurope.cloudapp.azure.com', 
+        'NAME': 'vln2', 
+        'USER': 'postgres', 
+        'PASSWORD': 'password', 
+        'HOST': 'localhost', 
         'PORT': '5432', 
-        'OPTIONS': {
-            'options': '-c search_path=vln2_assignment_groups_36'}
+        # 'OPTIONS': {
+            # 'options': '-c search_path=vln2_assignment_groups_36'}
     } 
 }
 
@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "JJ_app/static",
+    BASE_DIR / "static",
 ]
 
 STATIC_ROOT = BASE_DIR/"staticfiles"

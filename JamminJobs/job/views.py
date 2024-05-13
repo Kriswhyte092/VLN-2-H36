@@ -1,8 +1,9 @@
+# views.py
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
-
+from job.models import Job
 
 def home(request):
-    return HttpResponse('<h1>Sup mafakkas from the job view</h1>')
+    jobs = Job.objects.all()
+    context = {'job_titles': jobs}  # Corrected key to 'job_titles'
+    return render(request, 'jobs/job.html', context)
 

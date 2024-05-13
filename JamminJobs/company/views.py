@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from company.models import Company
+
 def home(request):
-    return HttpResponse('<h1>Sup mafakkas from the company view</h1>')
+    companies = Company.objects.all()
+    context = {'companies': companies} 
+    return render(request, 'companies/company.html', context)
+    
+

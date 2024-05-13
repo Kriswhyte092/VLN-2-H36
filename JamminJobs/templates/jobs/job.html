@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+{% block content %}
+    <h1 class="jobs">Job collection</h1>
+    <div class="job">
+        {% for job in job_titles %}  <!-- Updated loop variable name -->
+            {% include 'jobs/single_job.html' with job=job %}
+        {% endfor %}
+    </div>
+{% endblock %}
