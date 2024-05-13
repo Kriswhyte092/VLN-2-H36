@@ -80,7 +80,6 @@
     width: 226px;
     color: #7C8493;
     font-size: 16px;
-    font-family: Inter;
     font-weight: 400;
     line-height: 25.60px;
     word-wrap: break-word;
@@ -106,29 +105,21 @@
     line-height: 22.40px;
     word-wrap: break-word;
 }
-.body{
-	justify-content: center;
-}
 
 .home1{
-	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	border: solid 2px rgba(155, 155, 155, .5);
+	max-width: 99%;
 	display: flex;
 	align-items: flex-start;
-	gap: 32px;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .item{
 	display: flex;
 	height: auto;
-	padding: 24px;
+	padding: 14px;
 	flex-direction: row;
 	align-items: flex-start;
-	gap: 16px;
-	flex: 1 0 0;
-	border: solid;
 }
 
 .job-card:hover{

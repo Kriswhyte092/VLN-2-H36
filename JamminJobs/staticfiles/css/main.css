@@ -36,7 +36,7 @@
 
 .job-details {
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-con/static/js/feat_jobs.jstent: flex-start;
 	align-items: flex-start;
 	gap: 2px;
 	display: flex;
@@ -80,7 +80,6 @@
     width: 226px;
     color: #7C8493;
     font-size: 16px;
-    font-family: Inter;
     font-weight: 400;
     line-height: 25.60px;
     word-wrap: break-word;
@@ -107,26 +106,26 @@
     word-wrap: break-word;
 }
 
-
-
-
 .home1{
-	border: solid 2px rgba(155, 155, 155, .5);
+	max-width: 99%;
 	display: flex;
 	align-items: flex-start;
-	gap: 32px;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .item{
 	display: flex;
-	height: 283px;
-	padding: 24px;
+	height: auto;
+	padding: 14px;
 	flex-direction: row;
 	align-items: flex-start;
-	gap: 16px;
-	flex: 1 0 0;
-	border: solid;
 }
+
+.job-card:hover{
+	border: solid 2px black;	
+}
+
 @media screen and (max-width: 1290px) {
   .home1 {
     flex-wrap: wrap;

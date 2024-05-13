@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-        BASE_DIR / "JJ_app/static",
+    BASE_DIR / "JJ_app/static",
 ]
 
 STATIC_ROOT = BASE_DIR/"staticfiles"
