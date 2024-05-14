@@ -10,6 +10,7 @@ class User(models.Model):
     phone = models.IntegerField()
     picture = models.CharField(max_length=255, blank=True)
 
+
 class AppliesTo(models.Model):
     job_id = models.ForeignKey(Job, on_delete=models.CASCADE)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)

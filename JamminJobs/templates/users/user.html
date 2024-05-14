@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+{% block content %}
+    <h1 class="users">User collection</h1>
+    <div class="user">
+        {% for user in users %}
+            {% include 'users/single_user.html' with user=user %}
+        {% endfor %}
+    </div>
+{% endblock %}
+

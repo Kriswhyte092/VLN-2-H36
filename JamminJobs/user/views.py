@@ -1,5 +1,10 @@
+
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from user.models import User
+
 def home(request):
-    return HttpResponse('<h1>Sup mafakkas from the user view</h1>')
+    user_names = User.objects.all()
+    context = {'users': user_names} 
+    return render(request, 'users/user.html', context)
+    
+
