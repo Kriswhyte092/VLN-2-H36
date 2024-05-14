@@ -52,32 +52,6 @@ const jobs = [
 	
   // Define data for more jobs as needed
 ];
-
-  
-//function createJobCard(job) {
-//       const big_card = document.createElement("div");
-//       big_card.classList.add("big_card");
-//  
-//       big_card.innerHTML = `
-//         <div class="job-card-bigger">
-//           <div class="job-type-bigger">
-//             <div class="type-label-bigger">${job.company}</div>
-//           </div>
-//           <div class="job-details-bigger">
-//             <div class="location">
-//               <span class="company">${job.company}</span>
-//           <div class="dot"></div>
-//           <span class="location-text">${job.location}</span>
-//             </div>
-//           </div>
-//           <div class="job-description">${job.description}</div>
-//       </div>
-//      `;
-//  
-//       return big_card;
-//   }
-  
-
 function createJobCard(job) {
   const card = document.createElement("div");
   card.classList.add("item", "item-1");
@@ -110,11 +84,8 @@ function createBigJobCard(job) {
   bigCard.classList.add("bigCard");
   
   bigCard.innerHTML =  `
-    <div class="job-card">
-      <div class="job-type">
-        <div class="type-label">FullTime</div>
-      </div>
-      <div class="job-details">
+    <div class="big_job-card">
+      <div class="job-details-big">
         <div class="company-name">${job.company}</div>
         <div class="location">
           <span class="company">${job.company}</span>
