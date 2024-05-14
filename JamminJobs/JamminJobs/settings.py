@@ -79,7 +79,6 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-<<<<<<< HEAD
 DATABASES = { 
     'default': { 
         'ENGINE': 'django.db.backends.postgresql', 
@@ -92,20 +91,6 @@ DATABASES = {
             # 'options': '-c search_path=vln2_assignment_groups_36'}
     } 
 }
-=======
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'vln2_assignment_groups_36_user',
-#         'PASSWORD': 'lH5MlYi8FG',
-#         'HOST': 'verklegt-namskeid-ii.northeurope.cloudapp.azure.com',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'options': '-c search_path=vln2_assignment_groups_36'}
-#     }
-# }
->>>>>>> main
 
 
 # Password validation
