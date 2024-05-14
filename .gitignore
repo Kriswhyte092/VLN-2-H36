@@ -7,6 +7,3 @@ ENV/
 env.bak/
 venv.bak/
 test1/
-__pycache__/
-JamminJobs/JamminJobs/__pycache__/
-JamminJobs/JJ_app/__pycache__/
