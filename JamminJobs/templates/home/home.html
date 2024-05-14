@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% block content %}
+	<h1>HelloWorld</h1>
+	<div>
+	  {% for job in job %}
+	  {% include ð'home/single_job_home.html' with job=job %}	
+	  {% endfor %}
+	</div>
+{% endblock %}
+
