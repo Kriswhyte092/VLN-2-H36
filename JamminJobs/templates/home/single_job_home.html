@@ -1,5 +1,18 @@
 <div class=test>
 	<a href='#'>
-		<h4>{{ job.name }}</h4>
-	</a>
+	 <div class="job-card">
+          <div class="job-type">
+              <div class="type-label">FullTime</div>
+          </div>
+          <div class="job-details">
+		  <div class="company-name">{{ job.title }}</div>
+              <div class="location">
+                  <span class="company">{{ job.title }}</span>
+                  <div class="dot"></div>
+                  <span class="location-text">{{ job.location }}</span>
+              </div>
+          </div>
+          <div class="job-description">{{ job.description }}</div>
+      </div>
+      </a>
 </div>
