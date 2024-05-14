@@ -92,7 +92,7 @@ DATABASES = {
          'PORT': '5432', 
          # 'OPTIONS': {
              # 'options': '-c search_path=vln2_assignment_groups_36'}
-     } 
+     }
  }
 
 
