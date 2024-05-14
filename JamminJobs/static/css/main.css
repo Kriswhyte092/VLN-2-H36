@@ -1,3 +1,25 @@
+.feat {
+	color: #25324B;
+	font-size: 48px;
+	font-family: Abel;
+	font-weight: 400;
+	line-height: 52.80px;
+	word-wrap: break-word
+}
+
+.jobs {
+	color: #26A4FF;
+	font-size: 48px;
+	font-family: Abel;
+	font-weight: 400;
+	line-height: 52.80px;
+	word-wrap: break-word
+}
+
+.home-page-header{
+	padding-left: 110px;
+}
+
 .home2 {
 	max-width: 99%;
 	display: flex;
@@ -5,20 +27,42 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: row;
-	padding-left: 120px;
-	padding-right: 120px;
 }
 
 .bigCard {
-	width: 580px;
+	width: 610px;
+	height: 200px;
+	padding: 20px;
 
 }
 
+.Home_big_card {
+	width: inherit;
+}
+
+.big_job-card {
+	height: 99%;	
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #E4E4E4;
+}
+
+.big_job-card:hover {
+	border: solid 2px grey;
+}
 
 
-
-
-
+.job-details-big {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2px;
+	display: flex;
+	padding-left: 10px;
+}
 
 
 .job-card {
@@ -135,6 +179,7 @@
 	align-items: flex-start;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-bottom: 100px;
 }
 
 .item{
