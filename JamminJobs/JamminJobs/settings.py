@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'user',
     'job',
     'login',
+    'cmpnylogin',
+    'cmpnysignup',
+    'signup',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href='{% static '/css/loginstyle.css' %}?{% now "U" %}'>
+    <title>Sign up</title>
+</head>
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Sign Up Company</h1>
+                <br>
+                <div class="login-container">
+                        <p>Already have an account?</p>
+                        <br>
+                        <a href="/company-login.html">
+                            <button class="login-btn" type="submit">Log in</button>
+                        </a>
+                </div>
+            </section>
+        </div>
+        <div class="right">
+            <form>
+                <section class="copy">
+                    <p><b>Fill out the form below to register your company</b></p>
+                    
+                </section>
+                <div class="input-container name">
+                    <label for="fname">Company ID</label>
+                    <input id="fname" name="fname" type="text" placeholder="Enter your company ID number." required>
+                </div>
+                <div class="input-container name">
+                    <label for="fname">Name</label>
+                    <input id="fname" name="fname" type="text" placeholder="Enter your full name." required>
+                    
+                </div>
+                <div class="input-container name">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email (Not company email)." required>
+                </div>
+                <div class="input-container name">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Choose a password." required>
+                </div>
+                <div class="input-container cta">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Sign up for email updates
+                    </label>
+                </div>
+                <button class="signup-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

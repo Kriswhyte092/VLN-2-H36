@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.home, name="home"),  # Matches the root URL
+    path("", views.signup, name="home"),  # Matches the root URL
 ]
