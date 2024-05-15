@@ -15,6 +15,12 @@
 	line-height: 52.80px;
 	word-wrap: break-word
 }
+.card-divider {
+	height: 70px;
+}
+
+
+
 
 .home-page-header{
 	padding-left: 110px;
@@ -25,14 +31,14 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	flex-wrap: wrap;
 	flex-direction: row;
+	height:877px;
 }
 
 .bigCard {
-	width: 610px;
-	height: 200px;
-	padding: 20px;
+	width: 615px;
+	height: inherit;
+	padding: 25px;
 
 }
 
@@ -41,7 +47,8 @@
 }
 
 .big_job-card {
-	height: 99%;	
+	padding: 15px;	
+	height: 150px;	
 	display: flex;
 	flex-direction: row;
 	align-content: space-around;
