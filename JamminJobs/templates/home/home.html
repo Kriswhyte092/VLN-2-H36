@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+<div class="home-page-header"><span class=feat> Featured </span><span class=jobs> jobs </span></div>
+    <div class="home1">
+        {% for job in job %}
+            {% include 'home/single_job_home.html' with job=job %}
+        {% endfor %}
+    </div>
+<div class="home-page-header"><span class=feat> Latest </span><span class=jobs> jobs </span></div>
+    <div class="home2">
+      <div class=Home_big_card1>
+	{% for job in job %}
+            {% include 'home/single_big_job_home.html' with job=job %}
+        {% endfor %}
+      </div>
+      <div class=Home_big_card>
+        {% for job in job %}
+            {% include 'home/single_big_job_home.html' with job=job %}
+        {% endfor %}
+      </div>
+    </div>
+ {% endblock %}
