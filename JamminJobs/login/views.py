@@ -9,7 +9,7 @@ def home(request):
 
 
 def signup(request):
-    return render(request, 'login/signuppage.html')
+    return render(request, 'login/signup_page.html')
 
 
 def companysignup(request):

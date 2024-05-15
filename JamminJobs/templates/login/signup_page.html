@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %} Sign Up {% endblock %}
+{% block content %}
+<div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Log In</h1>
+                <br>
+                <p>Already have an account?</p>
+                <br>
+                <a href="/login.html">
+                    <button class="login-btn" type="submit">Log in</button>
+                </a>
+            </section>
+        </div>
+        <div class="right">
+            <form>
+                <section class="copy">
+                    <h1>Sign Up</h1>
+                    <p><b>Fill out your information</b></p>
+                </section>
+                <div class="input-container name">
+                    <label for="fname">Full Name</label>
+                    <input id="fname" name="fname" type="text" placeholder="Enter your full name." required>
+                </div>
+                <div class="input-container name">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email." required>
+                </div>
+                <div class="input-container name">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Choose a password." required>
+                    <i class="far fa-eye-slash"></i>
+                </div>
+                <div class="input-container cta">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Sign up for email updates
+                    </label>
+                </div>
+                <button class="signup-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
