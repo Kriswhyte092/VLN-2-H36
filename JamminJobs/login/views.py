@@ -11,7 +11,7 @@ def signup(request):
 
 
 def companysignup(request):
-    return render(request, 'login/company_sign_up.html')
+    return render(request, 'login/comp_signup.html')
 
 
 def companylogin(request):
