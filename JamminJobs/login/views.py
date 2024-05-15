@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def home(request):
+def login(request):
     return render(request, 'login/loginpage.html')
 
 def signup(request):
@@ -12,5 +12,5 @@ def signup(request):
 def companysignup(request):
     return render(request, 'login/company_sign_up.html')
 
-def companyloginindex(request):
+def companylogin(request):
     return render(request, 'login/company_log_in.html')
