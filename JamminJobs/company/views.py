@@ -7,3 +7,6 @@ def home(request):
     return render(request, 'companies/company.html', context)
     
 
+def companyindex(request):
+    companies = Company.objects.all()
+    return render(request, 'companyindex.html', {'companies': companies})

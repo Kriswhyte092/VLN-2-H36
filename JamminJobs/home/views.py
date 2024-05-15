@@ -6,3 +6,7 @@ def home(request):
     return render(request, 'home/home.html', {
         'job': Job.objects.all()[:8]
     })
+
+
+def homeindex(request):
+    return render(request, 'base.html')

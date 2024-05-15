@@ -10,6 +10,10 @@ def get_jobs(request):
 
 
 
+def jobindex(request):
+    jobs = Job.objects.all()
+    return render(request, 'jobindex.html', {'jobs': jobs})
+
 # @require_POST
 # def create_job(request):
 #     company = request.POST.get('company')

@@ -17,13 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('company/', include('company.urls')),
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('jobs/', include('job.urls')),
     path('companies/', include('company.urls')),
     path('users/', include('user.urls')),
+    path('user/', include('user.urls')),
     path('login/', include('login.urls')),
     path('signup/', include('signup.urls')),
+    path('signin/', include('signup.urls')),
     path('companysignup/', include('cmpnysignup.urls')),
     path('companylogin/', include('cmpnylogin.urls')),
 ]
