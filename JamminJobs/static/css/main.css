@@ -42,6 +42,10 @@
 
 }
 
+.top_buttons {
+	padding: 5px;
+}
+
 .Home_big_card {
 	width: inherit;
 }
