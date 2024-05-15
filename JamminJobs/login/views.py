@@ -7,7 +7,6 @@ def home(request):
     return render(request, 'login/login_page.html')
 
 
-
 def signup(request):
     return render(request, 'login/signup_page.html')
 
@@ -15,5 +14,6 @@ def signup(request):
 def companysignup(request):
     return render(request, 'login/company_sign_up.html')
 
+
 def companyloginindex(request):
-    return render(request, 'login/company_log_in.html')
+    return render(request, 'login/comp_login.html')
