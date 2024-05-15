@@ -1,16 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 # Create your views here.
 
 
 def login(request):
-    return render(request, 'login/loginpage.html')
+    return render(request, 'login/login_page.html')
+
 
 def signup(request):
-    return render(request, 'login/signuppage.html')
+    return render(request, 'login/signup_page.html')
+
 
 def companysignup(request):
     return render(request, 'login/company_sign_up.html')
 
+
 def companylogin(request):
-    return render(request, 'login/company_log_in.html')
+    return render(request, 'login/comp_login.html')
