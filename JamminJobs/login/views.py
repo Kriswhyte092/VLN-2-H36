@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'login/loginpage.html')
+    return render(request, 'login/login_page.html')
 
 
 
