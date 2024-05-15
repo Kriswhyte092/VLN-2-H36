@@ -6,11 +6,8 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'login/loginpage.html')
 
-
-
 def signup(request):
     return render(request, 'login/signuppage.html')
-
 
 def companysignup(request):
     return render(request, 'login/company_sign_up.html')
