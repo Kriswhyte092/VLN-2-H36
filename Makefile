@@ -1,31 +1,14 @@
-# Makefile for MyPythonProject
-
-# Python interpreter
 PYTHON3 = python3
-PYTHON = python
-# Virtual environment directory
-VENV_DIR = .venv
+VENV_DIR = venv
 
-start: venv activate install
+all: run clean
 
-
-# Install dependencies
-install:
-	$(PYTHON3) -m pip install -r requirements.txt
-
-# Create virtual environment
 venv:
 	$(PYTHON3) -m venv $(VENV_DIR)
+	$(VENV_DIR)/bin/pip install -r requirements.txt
 
-# Activate virtual environment
-activate:
-	. $(VENV_DIR)/bin/activate
+run: venv
+	$(VENV_DIR)/bin/python JamminJobs/manage.py runserver
 
-# Run the program
-run:
-	$(PYTHON) JamminJobs/manage.py runserver
-
-# Clean up
 clean:
 	rm -rf $(VENV_DIR)
-
