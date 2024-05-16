@@ -1,45 +1,60 @@
-{% extends "base.html" %} {% block title %} Sign Up {% endblock %}
-{% block content %}
-<div class="split-screen">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/loginstyle.css' %}?{% now 'U' %}">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="split-screen">
         <div class="left">
             <section class="copy">
                 <h1>Log In</h1>
                 <br>
-                <p>Already have an account?</p>
-                <br>
-                <a href="/login.html">
-                    <button class="login-btn" type="submit">Log in</button>
-                </a>
+                <div class="login-container">
+                    <a href="{% url 'login' %}"><strong>Log In</strong></a>
+                </div>
             </section>
         </div>
         <div class="right">
-            <form>
+            <form class="form-container" method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
                 <section class="copy">
-                    <h1>Sign Up</h1>
-                    <p><b>Fill out your information</b></p>
+                    <p><b>Fill out the form below to register</b></p>
                 </section>
                 <div class="input-container name">
-                    <label for="fname">Full Name</label>
-                    <input id="fname" name="fname" type="text" placeholder="Enter your full name." required>
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-container name">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter your username" required>
                 </div>
                 <div class="input-container name">
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Enter your email." required>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-container name">
-                    <label for="password">Password</label>
-                    <input id="password" name="password" type="password" placeholder="Choose a password." required>
-                    <i class="far fa-eye-slash"></i>
+                    <label for="password1">Password</label>
+                    <input id="password1" name="password1" type="password" placeholder="Choose a password" required>
                 </div>
-                <div class="input-container cta">
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Sign up for email updates
-                    </label>
+                <div class="input-container name">
+                    <label for="password2">Confirm Password</label>
+                    <input id="password2" name="password2" type="password" placeholder="Confirm your password" required>
                 </div>
-                <button class="signup-btn" type="submit">Sign Up</button>
+                <div class="input-container name">
+                    <label for="birthdate">Birthdate</label>
+                    <input id="birthdate" name="birthdate" type="date" required>
+                </div>
+                <div class="input-container name">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <button class="login-btn" type="submit">Sign Up</button>
             </form>
         </div>
     </div>
-{% endblock %}
+</body>
+</html>
