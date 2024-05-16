@@ -41,9 +41,9 @@ class JobCategory(models.Model):
 class Job(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
-    category = models.ForeignKey('JobCategory', on_delete=models.CASCADE, related_name='jobs')
-    type = models.ForeignKey('JobType', on_delete=models.CASCADE, related_name='jobs')
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='jobs')  # Ensure correct reference
+    category = models.ForeignKey(JobCategory, on_delete=models.CASCADE, related_name='jobs')
+    type = models.CharField(max_length=255)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='jobs')
     location = models.CharField(max_length=255, blank=True)
     date_added = models.DateTimeField()
     due_date = models.DateTimeField()
