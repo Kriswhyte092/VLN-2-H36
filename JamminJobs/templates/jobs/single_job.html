@@ -1,5 +1,19 @@
-<div class="well job">
+<div class="well-job">
     <a href="#">
-        <h1>{{ job.title }} {{job.description}}</h1><!-- Corrected variable name -->
+    <div class="big_job-card">
+     <div class="job-details-big">
+	<div class="company-name">{{ job.title }}</div>
+       <div class="location">
+          <span class="company">{{ job.company }}</span>
+           <div class="dot"></div>
+          <span class="location-text">{{ job.location }}</span>
+       </div>
+      </div>
+      <div class="apply">
+	      <h4>APPLY</h4>
+      </div>
+       <div class="job_description">{{ job.description }}</div>
+     </div>
+    <div class="job-card-divider"></div>
     </a>
 </div>
