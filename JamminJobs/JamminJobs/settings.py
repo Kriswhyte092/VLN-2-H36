@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 DATABASES = { 
      'default': { 
          'ENGINE': 'django.db.backends.postgresql', 
-         'NAME': 'vln2', 
+         'NAME': 'vln2024', 
          'USER': 'postgres', 
          'PASSWORD': 'password', 
          'HOST': 'localhost', 
