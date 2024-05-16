@@ -38,14 +38,13 @@ class JobCategory(models.Model):
 
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default=UNCAT)
 
-
 class Job(models.Model):
-    id = models.AutoField(primary_key=True)  
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
-    category = models.ForeignKey(JobCategory, on_delete=models.CASCADE, related_name='jobs')
-    type = models.ForeignKey(JobType, on_delete=models.CASCADE, related_name='jobs')
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='jobs')
+    category = models.ForeignKey('JobCategory', on_delete=models.CASCADE, related_name='jobs')
+    type = models.ForeignKey('JobType', on_delete=models.CASCADE, related_name='jobs')
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='jobs')  # Ensure correct reference
     location = models.CharField(max_length=255, blank=True)
     date_added = models.DateTimeField()
     due_date = models.DateTimeField()
-    description = models.TextField()  
+    description = models.TextField()
