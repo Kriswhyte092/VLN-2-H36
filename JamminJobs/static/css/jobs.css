@@ -46,8 +46,25 @@
 	flex-direction: column;
 }
 
-h4 {
+h5 {
 	color: white;
+	font-size: 16px;
+	margin: auto;
+}
+
+.apply:hover {
+	border: solid 2px white;
+}
+
+.big-job-card {
+	padding: 15px;	
+	height: 150px;	
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #E4E4E4;
 }
 
 
