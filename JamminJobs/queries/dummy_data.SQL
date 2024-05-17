@@ -16,7 +16,7 @@ VALUES
     (5210860249, 'IKEA', 'IKEA employs around 480 people in Iceland and offers a wide range of well-designed, functional home furnishing products.', 'Kauptún 4, 210 Garðabær, Iceland', 'https://www.ikea.is', '3545202500', 'company_logos/ikea.png'),
     (6509760649, 'Háskólinn í Reykjavík', 'Reykjavik University aims to create and share knowledge, preparing students for leadership positions.', 'Menntavegur 1, 101 Reykjavik, Iceland', 'https://www.ru.is', '3545996200', 'company_logos/reykjavikuniversity.png'),
     (6507070890, 'Nova', 'Nova has the happiest customers in mobile services, providing innovative and reliable telecommunication solutions.', 'Smáralind, 201 Kópavogur, Iceland', 'https://www.nova.is', '3545191000', 'company_logos/nova.png'),
-    (5810080150, 'Arion Banki', 'Arion Banki is a dynamic workplace, offering a wide range of financial products and services.', 'Borgartún 19, 105 Reykjavik, Iceland', 'https://www.arionbanki.is', '3544447000', 'company_logos/ArionbankiLogoIs.png');
+    (5810080150, 'Arion Banki', 'Arion Banki is a dynamic workplace, offering a wide range of financial products and services.', 'Borgartún 19, 105 Reykjavik, Iceland', 'https://www.arionbanki.is', '3544447000', 'company_logos/ArionbankiLogoIs - Copy (1).png');
 
 INSERT INTO vln2_assignment_groups_36.job_job (title, category_id, type, company_id, location, date_added, due_date, description)
 VALUES

@@ -1,11 +1,12 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block content %}
-<head>     
-  {% load static %}
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href='{% static '/css/jobs.css' %}?{% now "U" %}'>
-</head> 
+
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href='{% static ' /css/jobs.css' %}?{% now "U" %}'>
+</head>
 
 <form method="POST" action="{% url 'search_jobs' %}">
 	{% csrf_token %}
@@ -14,97 +15,95 @@
 </form>
 
 {% if messages %}
-	{% for message in messages %}
-		<p>{{ message }}</p>
-	{% endfor %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
 {% endif %}
 
 {% if searched_jobs %}
-	<h2>Search Results for "{{ query }}":</h2>
-	<ul>
-		{% for job in searched_jobs %}
-			<li>{{ job.title }} at {{ job.company }} in {{ job.category }}</li>
-		{% endfor %}
-	</ul>
+<h2>Search Results for "{{ query }}":</h2>
+<ul>
+	{% for job in searched_jobs %}
+	<li>{{ job.title }} at {{ job.company }} in {{ job.category }}</li>
+	{% endfor %}
+</ul>
 {% else %}
 {% endif %}
 
 <div class="Landing-Page">
-    <div class="filter">
-        <div class="type-of-employment">
-            <h4>Type of Employment</h4>
-	    <form>
-		<label for="Full-time"> 
-		    <input type="checkbox" id="Full-time" name="Full-time"> 
-		    Full-Time 
-		</label>
-		<label for="Part-time"> 
-		    <input type="checkbox" id="Part-time" name="Part-time"> 
-		    Part-Time 
-		</label>
-		<label for="Remote"> 
-		    <input type="checkbox" id="Remote" name="Remote"> 
-		    Remote 
-		</label>
-		<label for="Internship"> 
-		    <input type="checkbox" id="Internship" name="Internship"> 
-		    Internship
-		</label>
-		<label for="Contract"> 
-		    <input type="checkbox" id="Contract" name="Contract"> 
-		    Contract 
-		</label>
-	    </form>
+	<div class="filter">
+		<div class="type-of-employment">
+			<h4>Type of Employment</h4>
+			<form>
+				<label for="Full-time">
+					<input type="checkbox" id="Full-time" name="Full-time">
+					Full-Time
+				</label>
+				<label for="Part-time">
+					<input type="checkbox" id="Part-time" name="Part-time">
+					Part-Time
+				</label>
+				<label for="Remote">
+					<input type="checkbox" id="Remote" name="Remote">
+					Remote
+				</label>
+				<label for="Internship">
+					<input type="checkbox" id="Internship" name="Internship">
+					Internship
+				</label>
+				<label for="Contract">
+					<input type="checkbox" id="Contract" name="Contract">
+					Contract
+				</label>
+			</form>
+		</div>
+		<div class="Categories">
+			<h4>Job Categories</h4>
+			<form>
+				<label for="Design">
+					<input type="checkbox" id="Design" name="Design">
+					Desing
+				</label>
+				<label for="Sales">
+					<input type="checkbox" id="Sales" name="Sales">
+					Sales
+				</label>
+				<label for="Marketing">
+					<input type="checkbox" id="Marketing" name="Marketing">
+					Marketing
+				</label>
+				<label for="Education">
+					<input type="checkbox" id="Education" name="Education">
+					Education
+				</label>
+				<label for="Human-Resource">
+					<input type="checkbox" id="Human-Resource" name="Human-Resource">
+					Human Resource
+				</label>
+				<label for="Finance">
+					<input type="checkbox" id="Finance" name="Finance">
+					Finance
+				</label>
+				<label for="Healthcare">
+					<input type="checkbox" id="Healthcare" name="Healthcare">
+					Healthcare
+				</label>
+				<label for="Technology">
+					<input type="checkbox" id="Technology" name="Technology">
+					Technology
+				</label>
+			</form>
+		</div>
 	</div>
-        <div class="Categories">
-            <h4>Job Categories</h4>
-	    <form>
-		<label for="Design"> 
-		    <input type="checkbox" id="Design" name="Design"> 
-		    Desing 
-		</label>
-		<label for="Sales"> 
-		    <input type="checkbox" id="Sales" name="Sales"> 
-		    Sales 
-		</label>
-		<label for="Marketing"> 
-		    <input type="checkbox" id="Marketing" name="Marketing"> 
-		    Marketing 
-		</label>
-		<label for="Education"> 
-		    <input type="checkbox" id="Education" name="Education"> 
-		    Education 
-		</label>
-		<label for="Human-Resource"> 
-		    <input type="checkbox" id="Human-Resource" name="Human-Resource"> 
-		    Human Resource 
-		</label>
-		<label for="Finance"> 
-		    <input type="checkbox" id="Finance" name="Finance"> 
-		    Finance 
-		</label>
-		<label for="Healthcare"> 
-		    <input type="checkbox" id="Healthcare" name="Healthcare"> 
-		    Healthcare 
-		</label>
-		<label for="Technology"> 
-		    <input type="checkbox" id="Technology" name="Technology"> 
-		    Technology 
-		</label>
-	    </form>
-        </div >
-    </div>
-    <div class="job-list">
-	<div class="header-tag">
-	   <h2>All Jobs</h2> 
-        </div>	
-	<div class="job">
-            {% for job in jobs|slice:":7" %}
-                {% include 'jobs/single_job.html' with job=job %}
-            {% endfor %}
-        </div>
-    </div>
+	<div class="job-list">
+		<div class="header-tag">
+			<h2>All Jobs</h2>
+		</div>
+		<div class="job">
+			{% for job in jobs|slice:":7" %}
+			{% include 'jobs/single_job.html' with job=job %}
+			{% endfor %}
+		</div>
+	</div>
 </div>
 {% endblock %}
-
-
