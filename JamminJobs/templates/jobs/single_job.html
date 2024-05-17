@@ -1,5 +1,5 @@
+<!-- templates/jobs/single_job.html -->
 <div class="well-job">
-
    <div class="big-job-card">
       <div class="job-details-big">
          <div class="company-name">{{ job.title }}</div>
@@ -9,7 +9,7 @@
             <span class="location-text">{{ job.location }}</span>
          </div>
       </div>
-      <a href="#">
+      <a href="{% url 'apply_for_job' job.id %}">
          <div class="apply">
             <h5>APPLY</h5>
          </div>
@@ -17,5 +17,4 @@
       <img src="{{ job.company.company_logo.url }}" alt="{{ job.company.name }} Logo">
    </div>
    <div class="job-card-divider"></div>
-
 </div>
