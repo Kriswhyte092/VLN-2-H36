@@ -81,6 +81,7 @@ a:hover {
 }
 
 form input[type="text"],
+form input[type="username"],
 form input[type="email"],
 form input[type="password"] {
     display: block;
@@ -122,13 +123,13 @@ label {
 @media screen and (min-width: 900px) {
     .split-screen {
         flex-direction: row;
-        height: auto;
+        height: 150vh;
     }
     .left,
     .right {
         display: flex;
         width: 50%;
-        height: 100vh;
+        height: inherit;
         overflow-y: auto;
     }
 }
