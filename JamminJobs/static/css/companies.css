@@ -1,0 +1,48 @@
+
+.Landing-page {
+	height: 1800px;
+	width: 100%;
+	padding-top: 72px;
+	padding-bottom: 72px;
+	padding-right: 124px;
+	padding-left: 124px;
+	gap: 40px; 
+}
+
+.company-collection {
+	height: 100%;
+	border: solid 1px black;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.company-card {
+	border: solid 1px black;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.photo-box {
+	margin-top: 12px;
+	border: solid 1px black;
+	height: 100px;
+	width: 120px;
+}
+
+
+.para {
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 15px;
+}
+
+.addy {
+	font-size: 12px;
+}
