@@ -1,24 +1,48 @@
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm
 from django.contrib import messages
-from django.contrib.auth import login as auth_login
+from django.contrib.auth import login as log_in, authenticate, logout
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUserForm
+from job.models import Job
+
+
+def home(request):
+    return render(request, 'home/home.html', {
+        'job': Job.objects.all()[:6]
+    })
+
+
+def homeindex(request):
+    return render(request, 'base.html')
+
 
 def login(request):
-    return render(request, 'login/login_page.html')
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            log_in(request, user)
+            return redirect('home')
+
+    context = {}
+    return render(request, 'login/login_page.html', context)
 
 
 def signup(request):
+    form = CreateUserForm()
+
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            auth_login(request, user)  # Use auth_login to log in the user
-            messages.success(request, 'Registration successful. You are now logged in.')
-            return redirect('homeindex')  # Redirect to the desired page after successful registration
-        else:
-            messages.error(request, 'Registration failed. Please correct the errors.')
-    else:
-        form = CustomUserCreationForm()
-    return render(request, 'login/signup_page.html', {'form': form})
+            form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account was created for ' + user)
+            return redirect('login')
+
+    context = {'form': form}
+    return render(request, 'login/signup_page.html', context)
 
 
