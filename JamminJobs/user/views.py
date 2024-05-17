@@ -8,3 +8,5 @@ def home(request):
     return render(request, 'users/user.html', context)
     
 
+def profile_view(request):
+    return render(request, 'profile/profile.html')

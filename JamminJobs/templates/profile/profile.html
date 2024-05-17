@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% block title %} Sign Up {% endblock %}
+{% block content %}
+    <div class="profile-container">
+
+        <div class="basic-info">
+            <div class="profile-header">
+                <span class="span">👤</span>
+                <h3>Basic information</h3>
+                <button id="add-info-button">Add Basic Info</button>
+            </div>
+            <hr>
+            <div class="image-setup">
+                <div class="profile-img">
+                <img src="/Images/profile.png" id="profile-pic">
+                <label for="input-file" class="update-img">Update image</label>
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" class="input-img-button">
+                </div>   
+                <div class="basic-info-section" id="basicInfoSection">
+            <!-- Submitted entries will appear here -->
+            
+                </div>  
+            </div>
+        
+
+        
+        </div>
+
+        
+        <div id="basic-info-modal" class="info-modal">
+            <div class="info-modal-content">
+                <span class="close">&times;</span>
+                <form id="basic-info-form">
+                    <h3>Full name</h3>
+                    <input type="text" id="name" placeholder="Full Name" required class="info-input">
+                    <h3>Email</h3>
+                    <input type="email" id="email" placeholder="Email" required class="info-input">
+                    <h3>Phone number</h3>
+                    <input type="tel" id="phone" placeholder="Phone Number"  title="Enter a phone number in the format: 123-456-7890" required class="info-input">
+                    <h3>Date of birth</h3>
+                    <input type="date" id="dob" placeholder="Date of Birth" required class="info-input">
+                    <button type="submit">Save</button>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="education">
+            <div class="profile-header">
+                <span class="icon">🎓</span>
+                <h3>Education</h3>
+                <button id="add-button">Add Education</button>
+            </div>
+            <hr>
+            <div id="education-content">
+                <!-- Some javascript stuff here -->
+            </div>
+            <div class="education-section" id="educationSection">
+            
+            </div>
+        </div>
+
+        <div id="education-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="education-form">
+                    <h3>School or University</h3>
+                    <input type="text" id="school" placeholder="School or University" class="education-input">
+                    <h3>Field of study</h3>
+                    <input type="text" id="field" placeholder="Field of study" class="education-input">
+                    <h3>Degree</h3>
+                    <select id="degree" class="select-box">
+                        <option value="">Choose...</option>
+                        <option value="Unfinished">Unfinished</option>
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="PhD">PhD</option>
+                    </select>
+                    <h3>From</h3>
+                    <input type="month" id="from" placeholder="DD/MM/YYYY" class="education-input">
+                    <h3>To</h3>
+                    <input type="month" id="to" placeholder="DD/MM/YYYY" class="education-input">
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="educationModal.js"></script>
+    <script src="basicInfoModal.js"></script>
+    <script src="profilepic.js"></script>
+{% endblock %}

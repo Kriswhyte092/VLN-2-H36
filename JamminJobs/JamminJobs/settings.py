@@ -87,8 +87,8 @@ WSGI_APPLICATION = 'JamminJobs.wsgi.application'
 #          'PASSWORD': 'password', 
 #          'HOST': 'localhost', 
 #          'PORT': '5432', 
-#          # 'OPTIONS': {
-#              # 'options': '-c search_path=vln2_assignment_groups_36'}
+#          'OPTIONS': {
+#              'options': '-c search_path=vln2_assignment_groups_36'}
 #      }
 #  }
 

@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href='{% static '/css/companies.css' %}?{% now "U" %}'>
 </head>
 <div class="Landing-page">
-    <h1>Company collection</h1>
+    <h1>Companies</h1>
     <div class="company-collection">
         {% for company in companies %}
             {% include 'companies/single_company.html' with company=company %}
