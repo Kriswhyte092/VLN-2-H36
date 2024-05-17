@@ -2,8 +2,33 @@
 {% block content %}
 <head>     
   {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href='{% static '/css/jobs.css' %}?{% now "U" %}'>
 </head> 
+
+<form method="POST" action="{% url 'search_jobs' %}">
+	{% csrf_token %}
+	<input type="text" name="searched" placeholder="Search for jobs...">
+	<button type="submit">Search</button>
+</form>
+
+{% if messages %}
+	{% for message in messages %}
+		<p>{{ message }}</p>
+	{% endfor %}
+{% endif %}
+
+{% if searched_jobs %}
+	<h2>Search Results for "{{ query }}":</h2>
+	<ul>
+		{% for job in searched_jobs %}
+			<li>{{ job.title }} at {{ job.company }} in {{ job.category }}</li>
+		{% endfor %}
+	</ul>
+{% else %}
+{% endif %}
+
 <div class="Landing-Page">
     <div class="filter">
         <div class="type-of-employment">

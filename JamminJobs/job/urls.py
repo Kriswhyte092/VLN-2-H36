@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.get_jobs, name='jobindex'),
-    # Other URL patterns
+    path('search/', views.job_search, name='search_jobs'),    # Other URL patterns
 ]
