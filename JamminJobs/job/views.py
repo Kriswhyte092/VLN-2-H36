@@ -1,9 +1,9 @@
 # views.py
 from django.shortcuts import render
 from job.models import Job
-from django.views.decorators.http import require_POST
 from django.db.models import Q
 from django.contrib import messages
+from django.shortcuts import render, get_object_or_404
 
 
 def get_jobs(request):
@@ -34,18 +34,6 @@ def jobindex(request):
     jobs = Job.objects.all()
     return render(request, 'jobindex.html', {'jobs': jobs})
 
-# @require_POST
-# def create_job(request):
-#     company = request.POST.get('company')
-#     location = request.POST.get('location')
-#     description = request.POST.get('description')
-#     category = request.POST.get('category')
-
-#     if not all([company, location, description, category]):
-#         return JsonResponse({'error': 'Missing required fields'}, status=400)
-
-#     try:
-#         job = Job.objects.create(company=company, location=location, description=description, category=category)
-#         return JsonResponse({'success': 'Job created successfully', 'job_id': job.id})
-#     except Exception as e:
-#         return JsonResponse({'error': str(e)}, status=500)
+def apply_for_job(request, job_id):
+    job = get_object_or_404(Job, id=job_id)
+    return render(request, 'jobs/apply_for_job.html', {'job': job})
