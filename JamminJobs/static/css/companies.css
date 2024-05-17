@@ -1,6 +1,6 @@
 
 .Landing-page {
-	height: 1800px;
+	height: 2100px;
 	width: 100%;
 	padding-top: 72px;
 	padding-bottom: 72px;
@@ -10,21 +10,22 @@
 }
 
 .company-collection {
-	height: 100%;
-	border: solid 1px black;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .company-card {
-	border: solid 1px black;
-	width: 300px;
-	height: 300px;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	align-items: center;
+    border: solid 1px black;
+    margin: 12px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -40,7 +41,6 @@
     max-height: 100%;
     object-fit: contain; /* or 'cover' depending on how you want the images to fit */
 }
-
 
 
 .para {
