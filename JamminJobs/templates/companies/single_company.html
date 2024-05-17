@@ -2,8 +2,8 @@
     <div class="photo-box">
         <img src="{{ company.company_logo.url }}" alt="{{ company.name }} Logo">
     </div>
+    <a href="/companies/{{ company.id }}" class="see-more-button">See more</a>
     <h5>{{ company.name }}</h5>
     <p class="addy">{{ company.address }}</p>
     <p class="para">{{ company.bio }}</p>
 </div>
-

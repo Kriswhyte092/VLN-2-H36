@@ -1,57 +1,63 @@
-
-.Landing-page {
-	height: 2100px;
-	width: 100%;
-	padding-top: 72px;
-	padding-bottom: 72px;
-	padding-right: 124px;
-	padding-left: 124px;
-	gap: 40px; 
-}
-
-.company-collection {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
 .company-card {
-    border: solid 1px black;
-    margin: 12px;
-    width: 600px;
-    height: 300px;
+    border: solid 1px black; /* Border for each card */
+    margin: 12px auto; /* Center the card horizontally */
+    width: 90%; /* Use a percentage for the width */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Let the height adjust based on content */
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    text-align: center; /* Center text within the card */
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    background-color: #fff; /* White background for better contrast */
+    padding: 20px; /* Add padding inside the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better visibility */
 }
 
-
-.photo-box {
-    display: flex;
-    margin-top: 12px;
-    height: 100px;
-    width: 120px;
+.company-card img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
 }
 
-.photo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* or 'cover' depending on how you want the images to fit */
+.company-card h5, .company-card p, .company-card a {
+    width: 100%; /* Full width for child elements */
+    text-align: center; /* Center align text */
+    margin: 8px 0; /* Add some margin for spacing */
 }
 
-
-.para {
-	margin-top: 30px;
-	margin-right: 10px;
-	margin-left: 10px;
-	font-size: 15px;
+.see-more-button {
+    background-color: #00bfff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default button border */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Cursor change on hover */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Ensure it behaves like a button */
+    transition: background-color 0.3s; /* Smooth transition on hover */
 }
 
-.addy {
-	font-size: 12px;
+.see-more-button:hover {
+    background-color: #009acd; /* Darker shade on hover */
 }
 
+@media (max-width: 768px) {
+    .company-card {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+}
 
+@media (max-width: 480px) {
+    .company-card {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .company-card h5, .company-card p, .company-card a {
+        width: 100%; /* Full width for child elements */
+        text-align: center; /* Center align text */
+    }
+}
