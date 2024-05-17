@@ -1,18 +1,23 @@
 .Landing-Page {
-	height: 100%;
-	width: 100%;
-	padding-top: 72px;
-	padding-bottom: 72px;
-	padding-right: 124px;
-	padding-left: 124px;
-	justify-content: flex-start; 
-	align-items: flex-start; 
-	gap: 40px; 
-	display: inline-flex;
+    min-height: calc(100vh - 200px); /* Adjust based on the footer height */
+    width: 100%;
+    padding: 72px 124px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 40px; 
+}
+
+.filter {
+    width: 25%; /* Adjust width to take up a quarter of the page */
+}
+
+.job-list {
+    width: 75%; /* Adjust width to take up three-quarters of the page */
 }
 
 .body {
-	height: 1410px;
+    height: auto; /* Ensure it takes the full height available */
 }
 
 .my-form input[type="checkbox"] {
@@ -20,80 +25,75 @@
 }
 
 .job-card-divider{
-	height: 25px;
-}
-
-.job-list {
-	width: 100%;
+    height: 25px;
 }
 
 .job_description {
-	width: 100%; 
-   	color: #7C8493;
-   	font-size: 16px;
-   	font-weight: 400;
-   	line-height: 25.60px;
-   	word-wrap: break-word;
+    width: 100%; 
+    color: #7C8493;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.60px;
+    word-wrap: break-word;
 }
 
 .apply {
-	height: 55px;
-	width: 200px;
-	display: flex;
-	align-items: center;
-	background-color: #4640DE;
-	justify-content: flex-end;
-	flex-direction: column;
-}
-
-h5 {
-	color: white;
-	font-size: 16px;
-	margin: auto;
+    height: 55px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #4640DE;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
 }
 
 .apply:hover {
-	border: solid 2px white;
+    border: solid 2px white;
 }
 
 .big-job-card {
-	padding: 15px;	
-	height: 150px;	
-	display: flex;
-	flex-direction: row;
-	align-content: space-around;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	background-color: #E4E4E4;
+    padding: 15px;    
+    height: auto;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E4E4E4;
+    margin-bottom: 20px;
 }
 
 .job {
-	align-content: center;
+    align-content: center;
 }
 
 img {
-	width: 90px;
-	height: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    width: 90px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 788px){
-	img {
-		display: none;
-	}	
+@media (max-width: 788px) {
+    .Landing-Page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .filter, .job-list {
+        width: 100%;
+    }
+
+    img {
+        display: none;
+    }
 }
 
-@media (min-width: 788.1) and (max-width: 1332) {
-	img {
-		width: 50px;
-		height: 50px;
-		border: solid red;
-	}
+@media (min-width: 788.1px) and (max-width: 1332px) {
+    img {
+        width: 50px;
+        height: 50px;
+    }
 }
-
-
-
-
-
