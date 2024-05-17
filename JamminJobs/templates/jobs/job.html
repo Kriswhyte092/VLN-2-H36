@@ -24,7 +24,7 @@
     <h2>Search Results for "{{ query }}":</h2>
     <ul>
         {% for job in searched_jobs %}
-            <li>{{ job.title }} at {{ job.company }} in {{ job.category }}</li>
+            {% include 'jobs/single_job.html' with job=job %}
         {% endfor %}
     </ul>
 {% endif %}
