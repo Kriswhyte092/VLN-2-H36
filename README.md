@@ -28,7 +28,7 @@ Welcome to JamminJobs, a web application developed for the Verklegt 2 project. J
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/your-username/jamminjobs.git
+    git clon https://github.com/your-username/VLN-2-H36.git
     cd jamminjobs
     ```
 
